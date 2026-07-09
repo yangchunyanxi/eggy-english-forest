@@ -1,51 +1,36 @@
 
 let stars=0;
-let items=[];
-
-const levels=[
-["🌈 Color Forest","What color is the apple? 🍎",["Red","Blue","Green"],"Red"],
-["🐾 Animal Park","What is this? 🐱",["Cat","Dog","Bird"],"Cat"],
-["🍎 Fruit Island","I like ____",["Banana","Apple","Orange"],"Banana"],
-["🔢 Number Castle","How many apples? 🍎🍎🍎",["Two","Three","Five"],"Three"],
-["🏫 Sunny School","What's your name?",["My name is Sunny","Goodbye","Good night"],"My name is Sunny"]
+let lessons=[
+["三上 Lesson 1 Hello","Hello! What's your name?",["Hello","Goodbye","Thanks"],"Hello"],
+["三上 Colors","What colour is the apple?",["Red","Blue","Green"],"Red"],
+["三上 Numbers","How many apples?",["Two","Three","Five"],"Three"],
+["三上 Body","Touch your nose.",["Nose","Book","Dog"],"Nose"],
+["三下 Animals","What is this?",["Cat","Dog","Bird"],"Cat"],
+["三下 Food","I like ____.",["Apple","Book","Pen"],"Apple"],
+["三下 Clothes","What is this?",["Hat","Fish","Milk"],"Hat"],
+["三下 Family","This is my ____.",["Mother","Apple","Pencil"],"Mother"]
 ];
 
-function showHome(){
-document.getElementById("app").innerHTML=`
-<h2>🌳 English Forest Map</h2>
-<button onclick="play(0)">🌈 Color Forest</button>
-<button onclick="play(1)">🐾 Animal Park</button>
-<button onclick="play(2)">🍎 Fruit Island</button>
-<button onclick="play(3)">🔢 Number Castle</button>
-<button onclick="play(4)">🏫 Sunny School</button>
-<button onclick="dress()">👕 My Items</button>`;
-}
-
-function play(i){
-let l=levels[i];
-let h=`<h2>${l[0]}</h2><h3>${l[1]}</h3>`;
-l[2].forEach(x=>h+=`<button onclick="answer('${x}',${i})">${x}</button>`);
+function home(){
+let h="<h2>🌳 English Forest Map</h2>";
+lessons.forEach((x,i)=>{
+h+=`<button onclick="play(${i})">${x[0]}</button>`;
+});
 document.getElementById("app").innerHTML=h;
 }
-
-function answer(x,i){
-if(x==levels[i][3]){
+function play(i){
+let l=lessons[i];
+let h=`<h3>${l[0]}</h3><p>${l[1]}</p>`;
+l[2].forEach(a=>h+=`<button onclick="answer('${a}',${i})">${a}</button>`);
+document.getElementById("app").innerHTML=h;
+}
+function answer(a,i){
+if(a===lessons[i][3]){
 stars++;
 document.getElementById("stars").innerHTML=stars;
-if(stars==5)items.push("🎩 Rainbow Hat");
-document.getElementById("app").innerHTML=`
-<div class="reward">🎁</div>
-<h2>Great Job!</h2>
-<p>Sunny获得英语奖励⭐</p>
-<button onclick="showHome()">返回地图</button>`;
+document.getElementById("app").innerHTML="<h2>🎉 Great Job!</h2><p>获得英语星星⭐</p><button onclick='home()'>返回地图</button>";
 }else{
-document.getElementById("app").innerHTML=`<h2>Try Again!</h2><button onclick="play(${i})">重新挑战</button>`;
+document.getElementById("app").innerHTML="<h2>Try Again!</h2><button onclick='play("+i+")'>重新挑战</button>";
 }
 }
-
-function dress(){
-document.getElementById("app").innerHTML=
-"<h2>🎒 Sunny背包</h2><p>"+(items.length?items.join("<br>"):"暂无奖励")+"</p><button onclick='showHome()'>返回</button>";
-}
-
-showHome();
+home();

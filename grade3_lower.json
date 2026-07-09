@@ -1,0 +1,40 @@
+[
+  {
+    "lesson": "Animals",
+    "words": [
+      "cat",
+      "dog",
+      "bird",
+      "fish"
+    ],
+    "sentence": "What is this?"
+  },
+  {
+    "lesson": "Food",
+    "words": [
+      "apple",
+      "banana",
+      "orange"
+    ],
+    "sentence": "I like apples."
+  },
+  {
+    "lesson": "Clothes",
+    "words": [
+      "hat",
+      "shirt",
+      "shoes"
+    ],
+    "sentence": "What is this?"
+  },
+  {
+    "lesson": "Family",
+    "words": [
+      "father",
+      "mother",
+      "brother",
+      "sister"
+    ],
+    "sentence": "This is my family."
+  }
+]
