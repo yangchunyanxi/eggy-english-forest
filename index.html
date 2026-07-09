@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Eggy English Forest V4.2</title>
+<style>
+body{margin:0;background:#d8f5d0;font-family:"Microsoft YaHei";text-align:center}
+.game{max-width:600px;margin:20px auto;background:white;border-radius:30px;padding:25px}
+.sunny{font-size:100px;animation:jump 1s infinite}
+@keyframes jump{50%{transform:translateY(-20px)}}
+button{width:260px;padding:14px;margin:8px;border:0;border-radius:25px;background:#ffd166;font-size:18px}
+.star{color:#ff9800;font-size:24px}
+.reward{font-size:40px}
+</style>
+</head>
+<body>
+<div class="game">
+<h1>🐣 Eggy English Forest V4.2</h1>
+<div class="sunny">🐣</div>
+<div class="star">⭐ Stars: <span id="stars">0</span></div>
+<div id="app"></div>
+</div>
+<script src="scripts/game.js"></script>
+</body>
+</html>

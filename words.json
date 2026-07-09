@@ -1,0 +1,17 @@
+[
+  {
+    "word": "apple",
+    "meaning": "苹果",
+    "level": 1
+  },
+  {
+    "word": "cat",
+    "meaning": "猫",
+    "level": 2
+  },
+  {
+    "word": "banana",
+    "meaning": "香蕉",
+    "level": 3
+  }
+]
