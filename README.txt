@@ -1,11 +1,2 @@
-Sunny English Forest V6.2
-
-完整版框架：
-- 三年级上下册课程结构
-- 闯关地图
-- 单词卡
-- 发音接口
-- 奖励系统
-
-说明：
-当前为可运行框架。若提供完整教材PDF，可进一步逐Lesson精准录入。
+Sunny English Forest V6.3 Complete
+上传GitHub Pages覆盖原文件即可。

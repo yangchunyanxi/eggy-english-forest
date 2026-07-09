@@ -1,32 +1,10 @@
-[
-  {
-    "lesson": "Hello",
-    "words": [
-      "hello",
-      "hi",
-      "goodbye"
-    ],
-    "sentence": "Hello!"
-  },
-  {
-    "lesson": "Colors",
-    "words": [
-      "red",
-      "blue",
-      "green",
-      "yellow"
-    ],
-    "sentence": "What colour is it?"
-  },
-  {
-    "lesson": "Numbers",
-    "words": [
-      "one",
-      "two",
-      "three",
-      "four",
-      "five"
-    ],
-    "sentence": "How many?"
-  }
-]
+{
+  "book": "冀教版三年级上册",
+  "lessons": [
+    "Hello",
+    "Sunny School",
+    "Colors",
+    "Numbers",
+    "Body"
+  ]
+}
